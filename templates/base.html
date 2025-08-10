@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Mini Project</title>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('home') }}">Home</a> |
+        <a href="{{ url_for('login') }}">Login</a> |
+        <a href="{{ url_for('register') }}">Register</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>

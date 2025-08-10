@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Posts</h2>
+<form method="POST" action="{{ url_for('post') }}">
+    <textarea name="content" required></textarea><br><br>
+    <button type="submit">Add Post</button>
+</form>
+<hr>
+{% for p in posts %}
+    <p>{{ p }}</p>
+    <hr>
+{% else %}
+    <p>No posts yet.</p>
+{% endfor %}
+{% endblock %}
